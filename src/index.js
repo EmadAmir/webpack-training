@@ -1,7 +1,7 @@
-const cart =[];
+const cart = [];
 
 function log(message){
-    console.log(message + message);
+    console.log(message +" "+ message);
 }
 
 function addToCart(item){
