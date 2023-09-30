@@ -10,7 +10,7 @@ function addToCart(item){
 }
 
 function removeFromCart(idx){
-    cart.slice(idx,1); //slice method creates a copy of the cart idx => start 1 => end
+    cart.splice(idx,1); //slice method creates a copy of the cart idx => start 1 => end
     log("removed: "+ idx)
 }
 

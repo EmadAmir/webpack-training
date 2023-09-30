@@ -1,0 +1,1 @@
+(()=>{var o,a;[].push(o="waterproof boots"),a="added : "+o,console.log(a+" "+a)})();
