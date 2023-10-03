@@ -1,1 +1,0 @@
-(()=>{var o,e;[].push(o="waterproof boots"),e="added item : "+o,console.log(e+" "+e)})();
