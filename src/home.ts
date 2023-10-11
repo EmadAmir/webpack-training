@@ -1,4 +1,5 @@
-const util = require("./util");
+import util from "./util";
+// import "./css/main.css";
 
 function notificationRegister(email){
 

@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+      "target": "ES6",
+      "outDir": "./dist"
+    },
+    "include": [
+        "./src/**/*.ts"            /* Include TypeScript files under the 'src' directory and its subdirectories */
+      ]
+  }
+  
