@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+// const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+// const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 let production = process.env.NODE_ENV === "production";
 
@@ -29,15 +30,32 @@ let config = {
 
             },
             {
+                test:/\.html$/,
+                exclude: /node-modules/,
+                use: "html-loader"
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: "asset/resource",
+                generator: {
+                    filename: "DistImages/[name][ext]",
+                },
+            },
+
+            {
                 test: /\.scss$/,
                 exclude: /node_modules/,
                 use: ["style-loader","css-loader", "sass-loader"]           // back to first i.e, The css loader gets processed first and then the output of the CSS loader is fed to the Style-loader which is injected as js
                          
-            }
+            },
+
         ],
     },
     plugins: [ 
                 new HtmlWebpackPlugin({template: "./src/index.html"}),
+                // new CopyWebpackPlugin({
+                //     patterns: [{from: "./src/images", to: "images"}]
+                // }),
         
              ],
 
